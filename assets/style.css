@@ -1,0 +1,56 @@
+
+.content h1{
+    font-size: x-large;
+}
+.content{
+    font-size: large;
+    margin-left: 5%;
+}
+#user{
+    float: right;
+}
+#user li{
+    list-style: none;
+    display: inline;
+}
+
+.header a{
+    text-decoration: none;
+}
+
+
+.header ul li{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 10px 10px 10px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+
+}
+
+
+.reg{
+    text-align: center;
+}
+.pages_h1{
+    text-decoration: none;
+}
+
+
+.paginator{
+   margin-left: 45%;
+}
+#publish_date{
+    font-style: italic;
+    font-size: larger;
+}
+.comments{
+    margin-top: 40%;
+}
+
+
+
+
+
+
+

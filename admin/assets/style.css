@@ -1,0 +1,26 @@
+.mainc img{
+    height:100%;
+    width: 60%;
+    margin-left: 10%;
+}
+.menu ul{
+    float: left;
+    list-style-type: none;
+}
+
+.a_publ img{
+    width: 70%;
+}
+.a_publ{
+    float: right;
+}
+.publish_form{
+    margin-left: 20%;
+    text-align: right;
+    margin-right: 30%;
+}
+
+.publish_form input{
+
+    width: 40%;
+}
