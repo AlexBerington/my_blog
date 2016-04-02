@@ -7,8 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="../assets/style.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../assets/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="assets/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/bootstrap-theme.css">
     <title><?=$title?></title>
 </head>
 <body>
@@ -19,7 +17,7 @@
 <div class="header">
 
     <ul>
-        <li><a class="btn btn-default" href="?temp=home&page=1"> Главная</a></li>
+        <li><a class="btn btn-default" href="/home"> Главная</a></li>
         <li>О нас</li>
         <li>Контакты</li>
     </ul><img src="../assets/logo1.svg" class="img-responsive col-sm-offset-3">

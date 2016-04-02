@@ -1,6 +1,5 @@
-<?php
-$title = 'Регистрация';
-$all_content = '<form class="form-horizontal" action="controllers/reg.php" method="POST">
+
+<form class="form-horizontal" action="reg.php" method="POST">
 <div class="form-group">
 <div class="col-xs-2 col-sm-6">
     <label for="login" class="col-sm-3 control-label"> Логин</label> <input type="text" name="login"></div></div>
@@ -15,4 +14,4 @@ $all_content = '<form class="form-horizontal" action="controllers/reg.php" metho
 <label for="c_pass" class="col-sm-3 control-label">Подтверждение</label> <input type="password" name="c_pwd" id="c_pass"></div></div>
 <div class="form-group">
   <div class="col-xs-1 col-sm-offset-1">
-<input class="btn btn-success" type="submit" value="Зарегистрироваться"></div></div></form>';
+<input class="btn btn-success" type="submit" value="Зарегистрироваться"></div></div></form>

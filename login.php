@@ -18,9 +18,9 @@ $db->query($sql);
 if($db->data['username']&&$db->data['pwd']){
     $user = $db->data['username'];
     session::set('user',$user);
-    header('location: ../index.php');
+    header('location: ../home');
 }else{
-    header('location: index.php');
+    header('location: /home');
 }
 $db->close();
 

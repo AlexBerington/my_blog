@@ -1,7 +1,7 @@
 <?php
 session_start();
-require_once ('../classes/session.php');
-require_once ('../classes/db.php');
+require_once('../classes/session.php');
+require_once('../classes/db.php');
 switch($_GET['temp']){
     case "publications":
         include ('view/publications.php');

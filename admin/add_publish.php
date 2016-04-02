@@ -1,5 +1,5 @@
 <?php
-require_once ('../classes/db.php');
+require_once('../classes/db.php');
 $db = new db();
 $title = $_POST['title'];
 $meta_d = $_POST['meta_d'];
