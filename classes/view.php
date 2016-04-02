@@ -7,7 +7,7 @@ class view
         extract($environment);
 
         ob_start();
-        $path = 'template/'.$template.'.php';
+        $path = 'view/'.$template.'.php';
         if (is_file($path) === false) {
             throw new Exception('bad template : ' . $path);
         }

@@ -1,24 +1,22 @@
 <?php
 session_start();
-require_once ('classes/session.php');
-require_once ('classes/db.php');
-require_once('view/menu.php');
 
-$db = new db();
-switch ($_GET['temp']) {
-    case "page":
-        include("view/page.php");
-        break;
-    case "reg":
-        include("view/reg.php");
-        break;
-    case "adminpanel":
-        header('location: admin/?temp=main');
-        break;
-    default:
-        include("view/home.php");
-        break;
+function __autoload($class_name){
+    $class_path = 'classes/'.$class_name.'.php';
+    $controllers_path = 'controllers/'.$class_name.'.php';
+    $models_path = 'models/'.$class_name.'.php';
+
+    if(file_exists($class_path)){
+        require_once ($class_path);
+    }elseif(file_exists($controllers_path)){
+        require_once ($controllers_path);
+    }elseif(file_exists($models_path)){
+        require_once ($models_path);}else{
+        throw new Exception("Failed to load class");}
 }
-include ("templates/main.php");
-$db->close();
+
+$routing = new router();
+/*
+*/
+
 

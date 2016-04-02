@@ -1,5 +1,5 @@
 <?php
-require_once ('configs.php');
+
 
 class db
 {
@@ -28,24 +28,8 @@ class db
 
 
     }
-    public function getAll($lim = ""){
 
-        $sql = <<<SQL
-        SELECT * FROM pages $lim;
-SQL;
 
-        $res = $this->conn->query($sql);
-        return $res;
-    }
-    public function getActive($lim = ""){
-
-        $sql = <<<SQL
-        SELECT * FROM pages WHERE page_publish = 'Y' $lim;
-SQL;
-
-        $res = $this->conn->query($sql);
-        return $res;
-    }
     public function close(){
         $this->conn->close();
     }

@@ -6,7 +6,15 @@ class configs
     public static $db_user = "root";
     public static  $db_pwd = "107212155";
     public static $db_name = "blog";
-    public static $post_per_page=3;
+    public static $post_per_page = 3;
+
+    /**
+     * @return int
+     */
+    public static function getPostPerPage()
+    {
+        return self::$post_per_page;
+    }
     public static function db_set_param($host,$user,$pass,$db){
         self::$db_host = $host;
         self::$db_user = $user;
