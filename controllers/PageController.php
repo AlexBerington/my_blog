@@ -1,8 +1,4 @@
 <?php
-
-/**
-
- */
 class PageController
 {
     private $res;
@@ -20,7 +16,10 @@ class PageController
         $this->return = view::render('page',[
         'h1' => $db_connect->data['page_h1'],
         'content' => $db_connect->data['page_content'],
-        'date' => $db_connect->data['publish_date']
+        'date' => $db_connect->data['publish_date'],
+        'comments' => new CommentsController($url_id,$db_connect->conn),
+            'id' => $url_id,
+            'user' => session::get('user')
         ]);
 
     }

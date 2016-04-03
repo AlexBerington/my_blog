@@ -42,6 +42,22 @@ class RouterController
             'title' => 'Cognitio'
         ]);
     }
+    function action_login(){
+        $pass = $_POST['pass'];
+        $login = $_POST['username'];
+        new UserLogin($pass,$login);
+    }
+    function action_logout(){
+    new LogoutController();
+    }
+
+    function action_register_complete(){
+        new RegisterController();
+
+    }
+    function action_add_comment(){
+        new CaddController();
+    }
 
 
 }

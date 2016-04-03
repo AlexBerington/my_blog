@@ -10,8 +10,8 @@
     <title><?=$title?></title>
 </head>
 <body>
-
 <div class="row">
+
 <div class="col-xs- 12 col-sm-12 col-md-12 col-lg-12">
 
 <div class="header">
@@ -20,6 +20,7 @@
         <li><a class="btn btn-default" href="/home"> Главная</a></li>
         <li>О нас</li>
         <li>Контакты</li>
+
     </ul><img src="../assets/logo1.svg" class="img-responsive col-sm-offset-3">
     <?=$userpanel?>
     <?=$adminbutton?>

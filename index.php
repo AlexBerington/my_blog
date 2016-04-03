@@ -7,16 +7,14 @@ function __autoload($class_name){
     $models_path = 'models/'.$class_name.'.php';
 
     if(file_exists($core_path)){
-        require_once ($core_path);
+        include ($core_path);
     }elseif(file_exists($controllers_path)){
-        require_once ($controllers_path);
+        include ($controllers_path);
     }elseif(file_exists($models_path)){
-        require_once ($models_path);}else{
+        include ($models_path);}else{
         throw new Exception("Failed to load class");}
 }
-
 $routing = new router();
-/*
-*/
+
 
 

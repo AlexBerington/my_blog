@@ -1,5 +1,5 @@
 
-<form class="form-horizontal" action="reg.php" method="POST">
+<form class="form-horizontal" action="/register_complete" method="POST">
 <div class="form-group">
 <div class="col-xs-2 col-sm-6">
     <label for="login" class="col-sm-3 control-label"> Логин</label> <input type="text" name="login"></div></div>
