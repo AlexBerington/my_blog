@@ -1,17 +1,21 @@
 <div class="content">
-    <div class="panel-default">
-        <div class="panel-heading">
+
             <h1><?=$h1?></h1>
-        </div>
-        <div class="panel-body">
-            <p><?=$content?></p></div><div class="panel-footer"><p id="publish_date" >Дата публикации:  <?=$date?></a></p></div>
-    </div></div>
+
+
+            <p><?=$content?></p>
+
+        <img src="/assets/images/clock.png"    height="24"> <?=$date?>
+        <img src="/assets/images/eye.png"  height="24"><?=$counter?>
+        <img src="/assets/images/microphone.png" height="22"><?=$com_count?>
+
+    </div>
+
+
+
+
 <div class="comments">
-
-
     <?=$comments?>
-
-
 </div>
 <div class="comments_add"><form role="form" class="form-horizontal" action="/add_comment" method="POST">
         <div class="form-group">

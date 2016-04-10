@@ -7,33 +7,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="../assets/style.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../assets/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../assets/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/bootstrap-theme.css">
     <title><?=$title?></title>
 </head>
 <body>
-<div class="row">
+
+<div class="col-xs-12 col-lg-12 col-sm-12 col-md-12">
+<nav class="navbar-inverse ">
+        <div class="navbar ">
+            <ul class="nav navbar-nav">
+                <li><a href="/home">Главная</a></li>
+                <li><a href="/publ_today">Новое</a></li>
+                <li><a href="/best">Интересное</a></li>
+            </ul>
+
+        <?=$userpanel?>
+        </div>
+
+
+
+
+
+
+
+
+
+    <!-- /.nav-collapse -->
+    <!-- /.container -->
+</nav><!-- /.navbar -->
+</div>
+
+<div class="col-lg-offset-2">
+        <a href="/"> <img src="../assets/logo1.svg" class="img-responsive col-lg-offset-2"></a></div>
+
+
 
 <div class="col-xs- 12 col-sm-12 col-md-12 col-lg-12">
-
-<div class="header">
-
-    <ul>
-        <li><a class="btn btn-default" href="/home"> Главная</a></li>
-        <li>О нас</li>
-        <li>Контакты</li>
-
-    </ul><img src="../assets/logo1.svg" class="img-responsive col-sm-offset-3">
-    <?=$userpanel?>
-    <?=$adminbutton?>
-</div>
-</div>
-</div>
-
-
-<div class="col-xs- 12 col-sm-12 col-md-10 col-lg-10 block">
     <?=$all_content?>
-    <?=$pagination?>
-
-
 </div>
+    <div>
+    <?=$pagination?>
+    </div>
+
+
 </body>
 </html>

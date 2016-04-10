@@ -1,1 +1,1 @@
-<div><ul><a class="btn bg-warning" href="?temp=adminpanel">Admin Panel</a></ul></div>
+<ul class="nav navbar-nav navbar-right"><li><a href="/adminpanel">Admin Panel</a></li></ul>

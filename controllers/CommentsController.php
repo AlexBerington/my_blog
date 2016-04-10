@@ -8,8 +8,8 @@ class CommentsController
     public function __construct($url_id, $db)
     {
         $this->db = $db;
-        $model = new CommentsModel($this->db, $url_id);
-        $this->res = $model->gerComments();
+        $model = new CommentsModel();
+        $this->res = $model->gerComments($this->db, $url_id);
         $this->contents .= $this->render($this->contents);
 
 

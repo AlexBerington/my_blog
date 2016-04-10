@@ -2,28 +2,26 @@
 
 class configs
 {
+    private static $instance = null;
     public static $db_host = "localhost";
     public static $db_user = "root";
     public static  $db_pwd = "107212155";
     public static $db_name = "blog";
-    public static $post_per_page = 3;
-
-    /**
-     * @return int
-     */
-    public static function getPostPerPage()
-    {
-        return self::$post_per_page;
-    }
-    public static function db_set_param($host,$user,$pass,$db){
-        self::$db_host = $host;
-        self::$db_user = $user;
-        self::$db_pwd = $pass;
-        self::$db_name = $db;
-    }
-    public static function postsOnPage($num){
-        self::$post_per_page = $num;
+    public static $post_per_page = 6;
+    private function __construct(){}
+    private function __clone(){}
+    public static function getInstance(){
+        if(self::$instance = null) self::$instance = new self();
+        return self::$instance;
     }
 
+//    private static $settings = array();
+//    public static function get($key){
+//    return isset(self::$settings[$key])? self::$settings[$key] : null;
+//}
+//
+//    public static function set($key, $value){
+//        self::$settings[$key] = $value;
+//    }
 
 }

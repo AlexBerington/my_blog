@@ -1,10 +1,12 @@
-
+body{
+    zoom: 100%;
+}
 .content h1{
     font-size: x-large;
 }
 .content{
-    font-size: large;
-    margin-left: 5%;
+
+
 }
 #user{
     float: right;
@@ -42,8 +44,8 @@
 }
 #publish_date{
     font-style: italic;
-    font-size: larger;
 }
+
 
 
 

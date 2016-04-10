@@ -22,7 +22,7 @@ SQL;
     public function getActive($lim = ""){
 
         $sql = <<<SQL
-        SELECT * FROM pages WHERE page_publish = 'Y' $lim;
+        SELECT * FROM pages WHERE page_publish = 'Y' ORDER BY page_id DESC $lim;
 SQL;
 
         $res = $this->connect->query($sql);

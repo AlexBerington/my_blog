@@ -14,7 +14,9 @@ function __autoload($class_name){
         include ($models_path);}else{
         throw new Exception("Failed to load class");}
 }
+
 $routing = new router();
+
 
 
 

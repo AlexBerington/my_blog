@@ -19,9 +19,11 @@ class PageController
         'date' => $db_connect->data['publish_date'],
         'comments' => new CommentsController($url_id,$db_connect->conn),
             'id' => $url_id,
+            'counter' => $db_connect->data['counter'],
+            'com_count' => $db_connect->data['comments'],
             'user' => session::get('user')
-        ]);
 
+        ]);
     }
     public function __toString()
     {

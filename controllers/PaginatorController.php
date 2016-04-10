@@ -7,11 +7,13 @@ class PaginatorController
     private $result;
     private $page;
     private $db_conn;
-    public function __construct($page, $db)
+    public function __construct($page, $db, $date='')
     {
+        $da = date("m.d.y");
         $this->db_conn = $db;
         $this->page = $page;
-        $all_pages = new PaginatorModel($this->db_conn);
+        $date =
+        $all_pages = new PaginatorModel($this->db_conn,$date);
         $posts = $all_pages->res;
         $num = configs::$post_per_page;
 
@@ -25,8 +27,8 @@ class PaginatorController
         if($this->page > $total) $this->page = $total;
 
 
-        if ($this->page != 1){ $this->pervpage = '<a class="btn btn-success" href= /home/'.($this->page - 1).'>Назад</a> ';}
-        if ($this->page != $total) $this->nextpage = '<a class="btn btn-success" href= /home/'.($this->page + 1).'>Дальше</a>';
+        if ($this->page != 1){ $this->pervpage = '<a href= /home/'.($this->page - 1).'><img src="/assets/images/left.png" height="24"></a> ';}
+        if ($this->page != $total) $this->nextpage = '<a href= /home/'.($this->page + 1).'><img src="/assets/images/right.png" height="24"></a>';
        $this->result = view::render('pagination',[
            'pervpage' => $this->pervpage,
             'nextpage' => $this->nextpage
